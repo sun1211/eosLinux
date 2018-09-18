@@ -19,8 +19,8 @@ export function* fetchNetworks() {
     const networks = yield data.json();
 
     // get default
-    const network = networks.find(n => n.network === 'eos' && n.type === 'mainnet');
-    const endpoint = network.endpoints.find(e => e.name === 'EOS New York');
+    const network = networks.find(n => n.network === 'eos' && n.type === 'testnet');
+    const endpoint = network.endpoints.find(e => e.name === 'EOSMetal');
 
     // build activeNetwork
     const activeNetwork = {
